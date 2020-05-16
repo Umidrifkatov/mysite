@@ -218,7 +218,7 @@ try:
 
     def choose_todel(message, bot):
         try:
-            parts = message.text.split()
+            parts = message.text.split(' ', 1)
             models.Cart.objects.filter(user__userid=message.from_user.id, product__name=parts[1]).delete()
             get_cart(message, bot)
         except Exception:
