@@ -44,7 +44,7 @@ class Category(models.Model):
     
 class Product(models.Model):
     name = models.CharField(max_length=23, verbose_name='название')
-    caption = models.CharField(max_length=1024, verbose_name='описание')
+    caption = models.TextField(max_length=1044, verbose_name='описание')
     price = models.IntegerField(verbose_name='цена')
     pic = models.ImageField(upload_to='bot/', null=True, blank=True, verbose_name='изображение', help_text="БЕЗ ИЗОБРАЖЕНИЯ НЕАКТИВЕН")
     photo = models.CharField(max_length=1024, null=True, blank=True)
@@ -78,7 +78,7 @@ class Cart(models.Model):
     
 class Order(models.Model):
     user = models.ForeignKey(TgUser, on_delete=models.SET_NULL, null=True, verbose_name='пользователь')
-    itemandcost = models.CharField(max_length=2096, default=None, verbose_name='товары')
+    itemandcost = models.TextField(max_length=2096, default=None, verbose_name='товары')
     withmarkup = models.CharField(max_length=2096, default=None, null=True)
     time = models.DateTimeField(auto_now_add=True, verbose_name='время заказа')
     total = models.CharField(max_length=101, verbose_name='сумма')

@@ -6,7 +6,7 @@ __init__.py
 # C extensions
 *.so
 .vscode
-
+telegram/migrations/
 # Distribution / packaging
 .Python
 build/
