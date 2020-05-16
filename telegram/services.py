@@ -543,20 +543,20 @@ try:
             get_phone(message, bot)
 
 
-    def makestatistics():
-        lastday = 0
-        lastweek = 0
-        lastmonth = 0
-        now = timezone.now()
-        today = now.day
-        thisweek = now.isocalendar()[1]
-        thismonth = now.month()
-        if lastday != today:
-            pass
-        if lastmonth != thismonth:
-            pass
-        if lastweek != thisweek:
-            pass
+    # def makestatistics():
+    #     lastday = 0
+    #     lastweek = 0
+    #     lastmonth = 0
+    #     now = timezone.now()
+    #     today = now.day
+    #     thisweek = now.isocalendar()[1]
+    #     thismonth = now.month()
+    #     if lastday != today:
+    #         pass
+    #     if lastmonth != thismonth:
+    #         pass
+    #     if lastweek != thisweek:
+    #         pass
         
 
 
@@ -607,11 +607,13 @@ try:
             order.status = '🚗 Доставляется' 
             keyboard.append(keys[3])
             text = '#ДОСТАВЛЯЕТСЯ ' + timenow
-            # bot.send_message to user
+            usertext = TEXTS[user.lang]['orderid'] + ' №00' + str(order.id) + '\n' + TEXTS[user.lang]['ordersent']
+            bot.send_message(order.user.userid, usertext)
+        
         elif part2 == 'done':
             order.status = '✅ Выполнено'
             text = '#ВЫПОЛНЕНО ' + timenow
-            makestatistics()
+            # makestatistics()
         
         elif part2 == 'declined':
             order.status = '❤️ Отменен'
