@@ -33,8 +33,8 @@ uneditable = {
     '-':'➖',
     '+':'➕',
     'd':'❌ ',
-    'buttons': ['Русский', 'O\'zbekcha', 'Узбекча', 'English'],
-    'text': 'выберите язык...\n\n tilni tanlang...\n\nтилни танланг...'
+    'buttons': ['Русский', 'O\'zbekcha'],
+    'text': 'Выберите язык чтобы продолжить\n\n\n Davom etirish uchun tilni tanlang'
 }
 
 
@@ -72,7 +72,36 @@ TEXTS = {
         'about':'''❄️Замороженные манты/самса/котлеты...\n💯Все натуральное\n🥩Только мясо 🐄 и 🐓\n🚛Доставка 12.000 сум по Ташкенту\n🕙ПН-СБ 10:00-19:00\n☎️ +998(95)1942746''',
     },
     'uz':{
-        'firstmessage': 'Salom nima buyurtma qilasiz?',
+        'ordersent':'Buyurtmangiz tayyor. Qo\'ng\'iroq qabul qilishga tayyor boling.',
+        'orderaccepted': 'Buyurtma qabul qilindi.',
+        'gettype':'Olish usuli:',
+        'tomorrow':'Ertaga',
+        'today':'Bugun',
+        'timetoget': 'Olib kelish vaqti',
+        'mylocation': 'Karta',
+        'location': 'Olib kelish manzili',
+        'declined':'Bekor qilindi',
+        'accepted': 'Qabul qilindi',
+        'orderid':'Buyurma raqami:',
+        'total+':'Jami:',
+        'cash': 'Naqd pul',
+        'chosenpayment':'To\'lo\'v usuli:',
+        'chosepayment': 'To\'lo\'v usulini tanlang',
+        'phonerequest':'Telefon raqamingizni yuboring namuna: 998912345678',
+        'choseone': 'Tanlang:',
+        'locationrequest':'Locatsiyangizni yuboring',
+        'notworking':'Kechirasiz hozir ish vaqti emas, butyurtmani kechroq amal qiling',
+        'delivercost':'Olibkelish:',
+        'cantchekout':'Savatingiz bo\'sh',
+        'cartcleared': '♻️ Savat tozalandi',
+        'addedtocart':'✅ Savatga q\'o\'shildi',
+        'menu': 'Menu',
+        'emptycart': 'Savatingiz bo\'sh',
+        'total':'Jami:',
+        'currency': '[so\'m]',
+        'qty': 'dona',
+        'firstmessage': 'Nima buyurasiz?',
+        'about':'''about text about text''',
     }
 }
 
@@ -109,6 +138,32 @@ BUTTONS = {
         'phone': 'Телефон',
         'name': 'Имя',
         'lang': 'Язык',
+    },
+        'uz':{
+        'history': 'Buyurtmalar tarixi',
+        'cancel':'❌ Bekor qilish',
+        'agree':'✅ Tastdiqlash',
+        'payme':'PayMe',
+        'click':'Click',
+        'terminal':'Terminal',
+        'cash':'Naqd pul',
+        'sendphone':'📱 Nomerimni yuborish',
+        'sendlocation':'📍 Lokatsiyamni yuborish',
+        'tomorrow': 'Ertaga',
+        'today': 'Bugun',
+        'takeon':'Olib ketish',
+        'deliver':'Etkazib berish',
+        'addtocart': 'Savatga qo\'shish',
+        'clearcart': 'Tozalash',
+        'createorder': 'Tasdiqlash',
+        'back': 'Ortga',
+        'menu': 'Menyu',
+        'settings': 'Sozlamalar',
+        'cart': 'Savat',
+        'about': 'Biz haqimizda',
+        'phone': 'Telefon',
+        'name': 'Ism',
+        'lang': 'Til',
     }
 }
 

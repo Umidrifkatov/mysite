@@ -249,7 +249,9 @@ try:
         if mst in uneditable['buttons']:
             if mst == uneditable['buttons'][0]:
                 user.lang = 'ru' 
-            # additional ifs uz en uz
+            elif mst == uneditable['buttons'][1]:
+                user.lang = 'uz' 
+            # additional ifs en
             user.step = user_step['default']
             user.name = '@'+ message.from_user.username
             user.save()
