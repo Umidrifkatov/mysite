@@ -10,7 +10,8 @@ SETTINGS = {
     'terminal':True,
     'cash':True,
     'delivercost': 1000,
-    'group_id': -490006863, 
+    'group_id': -490006863,
+    'admin_id': 121637541,
     
 }
 
@@ -34,7 +35,7 @@ uneditable = {
     '+':'➕',
     'd':'❌ ',
     'buttons': ['Русский', 'O\'zbekcha'],
-    'text': 'Выберите язык чтобы продолжить\n\n\n Davom etirish uchun tilni tanlang'
+    'text': 'Выберите язык чтобы продолжить\n Davom etirish uchun tilni tanlang'
 }
 
 
@@ -179,9 +180,7 @@ user_step = {
     'get_phone': 7,
     'get_paymethod': 8,
     'changephone': 9,
-    # 'ENTER_PHONE': 10,
-    # 'ENTER_LOCATION': 11,
-    # 'ENTER_NAME': 12,
+
 }
 
 

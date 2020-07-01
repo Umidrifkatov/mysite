@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 import telebot
 from .services import *
-from .constants import BUTTONS, user_step
+from .constants import BUTTONS, user_step, SETTINGS
 from . import models
 
 
@@ -26,9 +26,13 @@ try:
     # в файл айди и сохранение таким образом
     # в базе данных   
     def tgfileid(pic):
-        photo = bot.send_photo(121637541, pic)
+        photo = bot.send_photo(SETTINGS['admin_id'], pic)
         return photo.photo[-1].file_id
 
+    @bot.message_handler(content_types=['photo'])
+    def photomessage(message):
+        if message.from_user.id == SETTINGS['admin_id']:
+            bot.send_message(SETTINGS['admin_id'], message.photo[-1].file_id)
 
     # первое сообщение боту если пользователя нет в 
     # то пользователь получает сообщение о выборе языка
@@ -37,10 +41,10 @@ try:
         start_message(message, bot)
         # bot.delete_message(message.chat.id, message.message_id - 1)
         
-    @bot.message_handler(commands=['statistics'])
-    def statmessage(message):
-        bot.send_photo(message.from_user.id, 'AgACAgIAAxkDAAIasF6_k5b_4X4vV4N4nPiZ1PSwkr6eAAJFrjEbQvUAAUrI7Quhc3bTxKG0g5IuAAMBAAMCAAN5AANedAEAARkE')
-        # bot.delete_message(message.chat.id, message.message_id - 1)
+    # @bot.message_handler(commands=['statistics'])
+    # def statmessage(message):
+    #     bot.send_photo(message.from_user.id, 'AgACAgIAAxkDAAIasF6_k5b_4X4vV4N4nPiZ1PSwkr6eAAJFrjEbQvUAAUrI7Quhc3bTxKG0g5IuAAMBAAMCAAN5AANedAEAARkE')
+    #     # bot.delete_message(message.chat.id, message.message_id - 1)
 
 
 
